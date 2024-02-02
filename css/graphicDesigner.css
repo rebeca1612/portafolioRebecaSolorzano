@@ -1,0 +1,654 @@
+body {
+    font-family: "Century Gothic", 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sectionPrincipal {
+    background-image: url('../img/imgBackgroundGD.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh);
+    z-index: 2;
+    width: 100%;
+}
+
+.sectionPrincipal1 {
+    background-image: url('../img/background1Design.png');
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-position: center;
+    height: calc(80vh);
+    z-index: 0;
+    width: calc(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionPrincipal1 a {
+    padding: 50px;
+}
+
+a {
+    font-size: 18px;
+    color: #b3b8c0;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+a:focus,
+a:hover {
+    color: #F8715F;
+}
+
+a:focus:after,
+a:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #F8715F;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+.et-hero-tabs,
+.et-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: #eee;
+    text-align: center;
+    padding: 0 1em;
+
+    h1 {
+        font-size: 2rem;
+        margin: 0;
+        letter-spacing: 1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+        opacity: 0.6;
+    }
+}
+
+.et-hero-tabs-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 10;
+
+    &--top {
+        position: fixed;
+        top: 0;
+    }
+}
+
+.et-hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 0.8rem;
+
+    &:hover {
+        color: white;
+        background: #F8715F;
+        transition: all 0.5s ease;
+    }
+}
+
+.et-hero-tab-slider {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    background: #66B1F1;
+    transition: left 0.3s ease;
+}
+
+.et-hero-tabs,
+.et-slide {
+    h1 {
+
+        padding: 50px;
+        font-size: 3rem;
+    }
+
+    h3 {
+        padding: 50px;
+        font-size: 1rem;
+    }
+}
+
+.et-hero-tab {
+    font-size: 1rem;
+}
+
+.et-slide2 {
+    display: flex;
+
+    /* flex-wrap: wrap; */
+
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: #eee;
+    text-align: center;
+    padding: 0 2em;
+
+    h1 {
+        font-size: 2rem;
+        margin: 0;
+        letter-spacing: 1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+        opacity: 0.6;
+    }
+}
+
+.et-slide2 {
+    h1 {
+        padding: 50px;
+        font-size: 3rem;
+    }
+
+    h3 {
+        padding: 50px;
+        font-size: 1rem;
+    }
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ccc;
+    font-family: arial, verdana, tahoma;
+} */
+
+
+.wrap {
+    flex-direction: row;
+}
+
+.wrap img {
+    width: 150px;
+    margin: 50px;
+    filter: drop-shadow(0px 4px 8px rgba(90, 90, 90, 0.5));
+}
+
+.icon {
+    display: inline-block;
+    /*Makes the icons inline block level elements. This will let us animate the transform property.*/
+    font-size: 44px;
+    animation: float 4s ease-in-out infinite;
+    /*Applies the float keyframe animation over 5s and makes it run infinitely.*/
+}
+
+.psIcon {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* This is the first item so no animation delay needed.*/
+}
+
+.aiIcon {
+    color: #1877f2;
+    /* Adds a animation delay of 1 second.*/
+    animation-delay: 1s;
+}
+
+.figmaIcon {
+    color: #25d366;
+    /* Adds a animation delay of 2 seconds.*/
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        /*The starting point of the animation is 0.*/
+    }
+
+    50% {
+        transform: translateY(-15px);
+        /*The middle point of the animation is -15xp. This will move the element up.*/
+    }
+
+    100% {
+        transform: translateY(0);
+        /*The last point of the animation is going back to the starting state of 0.*/
+    }
+}
+
+.accordian {
+    width: 760px;
+    height: 450px;
+    overflow: hidden;
+    margin: 100px auto;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+
+
+.accordian ul {
+    width: 2500px;
+
+}
+
+.accordian li {
+    position: relative;
+    display: block;
+    width: 200px;
+    float: left;
+    border-left: 1px solid #888;
+    box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+
+}
+
+.accordian ul:hover li {
+    width: 40px;
+}
+
+
+.accordian ul li:hover {
+    width: 800px;
+}
+
+
+.accordian li img {
+    display: block;
+}
+
+/*Image title styles*/
+.image_title {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 640px;
+
+}
+
+.image_title a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.et-slide3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    position: relative;
+    background: #eee;
+    text-align: center;
+    padding: 0;
+
+    h1 {
+        font-size: 2rem;
+        margin: 0;
+        letter-spacing: 1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+        opacity: 0.6;
+    }
+}
+
+.et-slide3 {
+    h1 {
+        padding: 50px;
+        font-size: 3rem;
+    }
+
+    h3 {
+        padding: 50px;
+        font-size: 1rem;
+    }
+}
+
+.et-hero-tabs1 {
+    h1 {
+        color: #F8715F;
+        padding: 50px;
+        font-size: 3rem;
+    }
+
+    h3 {
+        padding: 50px;
+        font-size: 1rem;
+    }
+}
+
+
+/*--------- PHOTOGRAPHY -----------*/
+
+
+/*-----------------*/
+/***** wikiped*****/
+/*-----------------*/
+
+.wikiped1 {
+    background-image: url('../img/wiki1.JPG');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-size: 7rem;
+    color: white;
+    height: calc(80vh);
+    width: 100%;
+}
+
+.wikiped2 {
+    background-image: url('../img/wiki2.JPG');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: calc(80vh);
+    width: 100%;
+
+    font-size: 7rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wikiped2 h3 {
+    font-size: 3rem;
+}
+
+.wikiped3 {
+    background-image: url('../img/wiki3.JPG');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(80vh);
+    width: 100%;
+}
+
+.et-slide4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #eee;
+    text-align: center;
+    padding: 0;
+
+    h1 {
+        font-size: 2rem;
+        margin: 150px;
+        letter-spacing: 1rem;
+        filter: drop-shadow(0px 4px 8px rgba(90, 90, 90, 0.5));
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
+        opacity: 0.6;
+    }
+}
+
+
+
+/*-----------------*/
+/***** arrozconpinna*****/
+/*-----------------*/
+
+.arroz1 {
+    background-image: url('../img/arroz1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-size: 7rem;
+    color: white;
+    height: calc(80vh);
+    width: 100%;
+}
+
+.arroz2 {
+    background-image: url('../img/arroz2.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: calc(80vh);
+    width: 100%;
+
+    font-size: 7rem;
+    color: rgb(110, 110, 110);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.arroz3 {
+    background-image: url('../img/arroz3.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(80vh);
+    width: 100%;
+}
+
+.arroz4 {
+    background-image: url('../img/arroz4.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    height: calc(80vh);
+    width: 100%;
+}
+
+/* CONTACT */
+
+.et-slide5 {
+    background-image: url('../img/background2Design.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #eee;
+    background-repeat: no-repeat;
+    height: calc(100vh);
+    z-index: 3;
+}
+
+.et-slide6 {
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+
+    h1 {
+        font-size: 2rem;
+        margin: 100px;
+        letter-spacing: 1rem;
+        filter: drop-shadow(0px 4px 8px rgba(90, 90, 90, 0.5));
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
+        opacity: 0.6;
+    }
+}
+
+.contact {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap
+}
+
+.contact1 {
+    flex-grow: 1;
+}
+
+.contact1 img {
+    margin: 10px;
+    width: 100px;
+}
+
+/* SOCIAL */
+
+.socialMedia {
+    margin: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.social-card {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: rgb(255, 255, 255);
+    padding: 20px 25px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.Btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.svgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    /* border: 1px solid rgba(156, 156, 156, 0.466); */
+    z-index: 2;
+}
+
+.BG {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #181818;
+    z-index: 1;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: all 0.3s;
+    font-size: 0px;
+}
+
+.github .BG {
+    background: #181818;
+}
+
+.linkdin .BG {
+    background: #0077b5;
+}
+
+.whatsapp .BG {
+    background: #075e54;
+}
+
+.discord .BG {
+    background: #7289da;
+}
+
+.Btn:hover .BG {
+    transform: scale(1.5);
+    /* transform-origin: bottom; */
+    font-size: 20px;
+    color: white;
+}
+
+.Btn:hover .svgContainer {
+    border: 1px solid rgba(216, 216, 216, 0.466);
+    background-color: rgba(209, 209, 209, 0.466);
+    backdrop-filter: blur(4px);
+}
+
+.footer{
+    display: grid;
+    place-items: center;
+    height: 100px;
+    text-align: center;
+    background-color: #e5e5e5;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
